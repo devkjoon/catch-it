@@ -46,10 +46,11 @@ h1 {
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    transition: margin 0.5s ease-out;
 }
 
 .screen.up {
-    margin-top: -200vh;
+    margin-top: -100vh;
 }
 
 .insects-list {
@@ -114,7 +115,8 @@ h1 {
     padding: 20px;
     z-index: 100;
     text-align: center;
-    opacity: 0;  /* ! makes text go away */
+    opacity: 0;
+    /* ! makes text go away */
     position: absolute;
     top: 0;
     left: 50%;
