@@ -19,7 +19,11 @@ a {
 }
 
 h1 {
-    line-height: 1.4s;
+    line-height: 1.4;
+}
+
+h4 {
+    line-height: 2
 }
 
 .btn {

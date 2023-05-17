@@ -33,10 +33,10 @@ function startGame() {
 function increaseTime() {
   let m = Math.floor(seconds / 60);
   let s = seconds % 60;
-  m = m < 10 ? `0${m}` : m
-  s = s < 10 ? `0${s}` : s
-  timeEl.innerHTML = `Time: ${m}:${s}`
-  seconds++
+  m = m < 10 ? `0${m}` : m;
+  s = s < 10 ? `0${s}` : s;
+  timeEl.innerHTML = `Time: ${m}:${s}`;
+  seconds++;
 }
 
 function createInsect() {
@@ -63,5 +63,21 @@ function getRandomLocation() {
 }
 
 function catchInsect() {
-  console.log(123);
+  increaseScore();
+  this.classList.add("caught");
+  setTimeout(() => this.remove(), 2000);
+  addInsects();
+}
+
+function addInsects() {
+  setTimeout(createInsect, 1000);
+  setTimeout(createInsect, 1500);
+}
+
+function increaseScore() {
+  score++;
+  if (score > 20) {
+    message.classList.add("visible");
+  }
+  scoreEl.innerHTML = `Score: ${score}`;
 }
